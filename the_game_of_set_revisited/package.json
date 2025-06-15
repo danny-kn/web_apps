@@ -1,0 +1,11 @@
+{
+  "name": "game-of-set",
+  "version": "1.0.0",
+  "description": "The Game of Set implementation",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,362 @@
+/* source: https://developer.apple.com/design/human-interface-guidelines/color */
+
+/* color variables */
+:root {
+  --red: #ba0c2f;
+
+  --gray: rgb(142, 142, 147);
+
+  --gray2-light: rgb(174, 174, 178);
+  --gray3-light: rgb(199, 199, 204);
+  --gray4-light: rgb(209, 209, 214);
+  --gray5-light: rgb(229, 229, 234);
+  --gray6-light: rgb(242, 242, 247);
+
+  --gray2-dark: rgb(99, 99, 102);
+  --gray3-dark: rgb(72, 72, 74);
+  --gray4-dark: rgb(58, 58, 60);
+  --gray5-dark: rgb(44, 44, 46);
+  --gray6-dark: rgb(28, 28, 30);
+
+  --background-color: var(--gray6-light);
+  --text-color: var(--gray6-dark);
+  --accent-color: rgb(0, 122, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base styles for the entire document */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Geist", "Helvetica", sans-serif;
+  line-height: 1.8;
+}
+
+/* main container for consistency */
+.main-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  max-width: 75%;
+}
+
+header {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5%;
+  border: 1px solid var(--gray5-light);
+  border-radius: 0.25rem;
+  background-color: var(--gray5-light);
+  box-shadow: 0 2px 4px var(--gray3-light);
+  gap: 1%;
+}
+
+.button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid var(--background-color);
+  border-radius: 0.25rem;
+  background-color: var(--background-color);
+  /* color: var(--text-color); */
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  border-color: var(--red);
+  background-color: var(--red);
+  color: var(--background-color);
+  transform: translateY(-3px);
+}
+
+.button-primary {
+  border-color: var(--red);
+  background-color: var(--red);
+  color: var(--background-color);
+}
+
+#new-game {
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.score {
+  text-wrap: nowrap;
+  font-size: 1.5rem;
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  background-color: var(--red);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--background-color);
+}
+
+.score-text {
+  font-size: 1rem;
+}
+
+.deck-info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+#remaining-cards {
+  font-size: 1rem;
+  /* font-weight: 600; */
+  text-transform: capitalize;
+  margin-right: 3rem;
+}
+
+#timer {
+  font-size: 1.5rem;
+  /* font-weight: 600; */
+  text-transform: uppercase;
+  margin-right: 3rem;
+}
+
+.deck-toggle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.check-toggle:hover {
+  transform: translateY(-3px);
+}
+
+.deck-container {
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  padding: 0.5%;
+  border-radius: 0.25rem;
+  /* background-color: var(--background-color);
+  box-shadow: 0 2px 4px var(--gray3-light); */
+  gap: 10px;
+}
+
+.gameboard-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 1rem;
+  padding: 0.5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  /* playing card aspect ratio */
+  aspect-ratio: 5/7;
+  background-image: linear-gradient(
+    150deg,
+    var(--gray6-light) 0%,
+    var(--gray5-light) 100%
+  );
+  border-radius: 0.75rem;
+  border: 0.75px solid var(--gray6-dark);
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+  gap: 5%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.card:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 1px 25px -1px var(--gray3-light);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mini {
+  height: 60px;
+}
+
+.mini > img {
+  width: 75%;
+}
+
+.card.selected {
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Notification Container */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Individual Notifications */
+.notification {
+  background: white;
+  border-radius: 4px;
+  padding: 12px 24px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+/* Notification Types */
+.notification.info {
+  border-left: 4px solid var(--accent-color);
+}
+
+.notification.warning {
+  border-left: 4px solid orange;
+}
+
+.notification.error {
+  border-left: 4px solid var(--red);
+}
+
+/* Notification Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .gameboard-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .button {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  .gameboard-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3%;
+  }
+
+  .button {
+    flex: 1 1 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  .scoreboard {
+    flex-direction: column;
+  }
+  .deck-info {
+    flex-direction: row;
+  }
+}
+
+/* Accessibility improvements */
+.button:focus,
+.card:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid black;
+  }
+
+  .selected {
+    outline: 3px solid black;
+  }
+}
+
+.selected {
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+.game-over-container {
+  display: none;
+}
+
+.game-over-container-visible {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

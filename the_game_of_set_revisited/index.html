@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game of Set</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- source: https://www.ycode.com/blog/20-best-fonts-for-web-design-in-2024 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>The Game of Set</h1>
+      </header>
+      <main>
+        <div class="action-buttons">
+          <button id="new-game" class="button button-primary">New Game</button>
+          <button id="draw-three" class="button">Draw 3</button>
+          <button id="instr" class="button">How to Play</button>
+        </div>
+        <div class="scoreboard">
+          <div class="score">
+            <p class="score-number" id="score"></p>
+            <p class="score-text">Score</p>
+          </div>
+          <p id="timer" class="timer"></p>
+          <div class="deck-info">
+            <button id="deck-toggle" class="deck-toggle button button-primary">
+              Show Deck
+            </button>
+            <button id="check" class="button button-primary">Check Set</button>
+          </div>
+        </div>
+        <p id="remaining-cards"></p>
+        <div id="deck-container" class="deck-container">
+        </div>
+        <div id="gameboard" class="gameboard-container">
+        </div>
+        <div id="game-over" class="game-over-container">
+          <h2>Game Over!</h2>
+          <button id="play-again" class="button button-primary">
+            Play Again
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
