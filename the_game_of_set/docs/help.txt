@@ -1,0 +1,6 @@
+Three cards form a Set if each of the following holds:
+    (1) all cards have the same number OR all cards have different numbers,
+    (2) all cards have the same shape OR all cards have different shapes,
+    (3) all cards have the same shading OR all cards have different shadings,
+    (4) all cards have the same color OR all cards have different colors.
+
