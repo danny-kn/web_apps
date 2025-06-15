@@ -1,0 +1,24 @@
+<div class="header-top">
+  <div class="logo">
+    <%# image_tag "osu-logo.svg", alt: "The Ohio State University" %>
+    <%= link_to image_tag("osu-logo2.png", alt: "The Ohio State University"), "/" %>
+  </div>
+  <div class="site-title">
+    <span>Department Faculty:</span>
+    <span>COMPUTER SCIENCE AND ENGINEERING</span>
+  </div>
+  <div class="header-links">
+    <a href="https://cse.osu.edu/alumni">Alumni & Friends</a>
+    <a href="https://cse.osu.edu/administrative-contacts">Contact Us</a>
+  </div>
+</div>
+<nav>
+  <ul>
+    <li><%= link_to "About", "/about.html" %></li>
+    <li><%= link_to "Degrees", "/degrees.html" %></li>
+    <li><%= link_to "Faculty & Research", "/faculty-research.html" %></li>
+    <li><%= link_to "News", "/news.html" %></li>
+    <li><%= link_to "Current Students", "/current-students.html" %></li>
+    <li><%= link_to "Faculty Recruiting", "/faculty-recruiting.html" %></li>
+  </ul>
+</nav>

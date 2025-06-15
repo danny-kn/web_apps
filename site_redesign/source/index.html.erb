@@ -1,0 +1,107 @@
+---
+title: Radu Teodorescu - The Ohio State University
+---
+
+<section class="hero">
+  <div class="headshot">
+    <%= image_tag "prof_pic-800.webp", alt: "Radu Teodorescu" %>
+  </div>
+  <div class="hero-content">
+    <h1>Radu Teodorescu</h1>
+    <p class="title">Professor, Computer Science and Engineering</p>
+    <p class="subtitle">The Ohio State University</p>
+  </div>
+</section>
+
+<section class="quick-info">
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p><i class="fas fa-map-marker-alt"></i> Dreese Laboratories, 2015 Neil Ave, Columbus, OH 43210-1210</p>
+    <p><i class="fas fa-phone"></i> (614) 292-7027</p>
+    <p><i class="fas fa-envelope"></i> teodorescu.1@osu.edu</p>
+  </div>
+  <div class="research-links">
+    <h2>Research Links</h2>
+    <a href="https://radu.teodorescu.us/" class="button">Research Website</a>
+    <a href="https://archlab.us/" class="button">Computer Architecture Research Lab</a>
+  </div>
+</section>
+
+<section class="biography">
+  <h2>Biography</h2>
+  <p>Radu Teodorescu is a Professor in the Department of Computer Science and Engineering at Ohio State University where he leads the Computer Architecture Research Lab. He received a Ph.D. in Computer Science from University of Illinois at Urbana-Champaign in 2008.</p>
+  <p>He was the recipient of the CSE Department Teaching Award in 2021, a Lumley Award in 2014, an NSF CAREER award in 2012, an Intel Foundation Fellowship in 2007-2008 and the W. J. Poppelbaum Award for 2008.</p>
+</section>
+
+<section class="expertise">
+  <h2>Expertise</h2>
+  <ul>
+    <li>Computer architecture</li>
+    <li>Energy efficient computing</li>
+    <li>Security and reliability</li>
+  </ul>
+</section>
+
+<section class="publications">
+  <h2>Selected Publications</h2>
+  <table>
+    <% data.publications.each do |publication| %>
+      <tr>
+        <td>
+          <% if publication.badge %>
+            <% badge_class = case publication.badge.text
+              when "HOST", "SP", "CAL", "PACT" then "badge-lightblue"
+              when "ISCA" then "badge-red"
+              when "NDSS" then "badge-darkblue"
+              else ""
+              end %>
+
+            <% content = content_tag(:div, publication.badge.text, class: "badge #{badge_class}") %>
+            <%= publication.badge.link ? link_to(content, publication.badge.link, target: "_blank") : content %>
+          <% end %>
+        </td>
+        <td class="content">
+          <div class="title"><%= publication.title %></div>
+          <div class="authors"><%= publication.authors %></div>
+          <div class="periodicals"><%= publication.periodicals %></div>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%# <ul>
+    <li>Deep neural network (DNN) classifiers are known to be vulnerable to adversarial attacks, in which a model is induced to misclassify an input into the wrong class. These attacks affect virtually all state-of-the-art DNN models. While most adversarial attacks work by altering the classifier input, recent variants have also targeted the model parameters. This paper focuses on a new attack vector on DNN models that leverages computation errors, rather than memory errors, deliberately introduced during DNN inference to induce misclassification. In particular, it examines errors introduced by voltage noise into FPGA-based accelerators as the attack mechanism. In an advancement over prior work, the paper demonstrates that targeted attacks are possible, even when randomly occurring faults are used. It presents an approach for precisely characterizing the distribution of faults under noise of individual input devices, by examining classification errors in select inputs. It then shows how, by fine-tuning the parameters of the attack (noise levels and target DNN layers) the attacker can produce the desired misclassification class, without altering the original input. We demonstrate the attack on an FPGA device and show the attack success rate ranges between 80% and 99.5% depending on the DNN model and dataset.</li>
+    <li>Hardware-assisted memory encryption offers strong confidentiality guarantees for trusted execution environments like Intel SGX and AMD SEV. However, a recent study by Li et al. presented at USENIX Security 2021 has demonstrated the CipherLeaks attack, which monitors ciphertext changes in the special VMSA page. By leaking register values saved by the VM during context switches, they broke state-of-the-art constant-time cryptographic implementations, including RSA and ECDSA in the OpenSSL. In this paper, we perform a comprehensive study on the ciphertext side channels. Our work suggests that while the CipherLeaks attack targets only the VMSA page, a generic ciphertext side-channel attack may exploit the ciphertext leakage from any memory pages, including those for kernel data structures, stacks and heaps. As such, AMD’s existing countermeasures to the CipherLeaks attack, a firmware patch that introduces randomness into the ciphertext of the VMSA page, is clearly insufficient. The root cause of the leakage in AMD SEV’s memory encryption—the use of a stateless yet unauthenticated encryption mode and the unrestricted read accesses to the ciphertext of the encrypted memory—remains unfixed. Given the challenges faced by AMD to eradicate the vulnerability from the hardware design, we propose a set of software countermeasures to the ciphertext side channels, including patches to the OS kernel and cryptographic libraries. We are working closely with AMD to merge these changes into affected open-source projects.</li>
+    <li>Microarchitectural vulnerabilities have become an increasingly effective attack vector. This is especially problematic for security critical applications, which handle sensitive data and may employ software-level hardening in order to thwart data leakage. These strategies rely on necessary assumptions about the underlying microarchitectural implementation, which may (and have proven to be) incorrect in some instances, leading to exploits. Consequently, devising early-stage design tools for reasoning about and verifying the correctness of high assurance applications with respect to a given hardware design is an increasingly important problem. This letter presents a principled dynamic testing methodology to reveal and analyze data-dependent microarchitectural behavior with the potential to violate assumptions and requirements of security critical software. A differential analysis is performed of the microarchitectural state space explored during register transfer-level (RTL) simulation to reveal internal activity which correlates to sensitive data used in computation. We demonstrate the utility of the proposed methodology through it’s ability to identify secret data leakage from selected case studies with known vulnerabilities.</li>
+  </ul> %>
+  <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=IKz0hvkAAAAJ" class="button">View All Publications</a>
+</section>
+
+<section class="teaching">
+  <h2>Teaching</h2>
+  <ul>
+    <li>CSE 3421: Intro to Computer Architecture</li>
+    <li>CSE 6421: Computer Architecture</li>
+  </ul>
+</section>
+
+<section class="awards">
+  <h2>Awards and Honors</h2>
+  <ul>
+    <li>CSE Department Teaching Award, 2021</li>
+    <li>Lumley Award, 2014</li>
+    <li>NSF CAREER Award, 2012</li>
+    <li>Intel Foundation Fellowship, 2007-2008</li>
+    <li>W. J. Poppelbaum Award, 2008</li>
+  </ul>
+</section>
+
+<section class="cv">
+  <h2>Curriculum Vitae</h2>
+  <div class="cv-container">
+    <object data="<%= url_for('/files/teodorescu_cv.pdf') %>" type="application/pdf" width="100%" height="600px">
+      <p>It appears you don't have a PDF plugin for this browser.
+      No worries, you can <a href="<%= url_for('/files/teodorescu_cv.pdf') %>">click here to download the PDF file.</a></p>
+    </object>
+  </div>
+  <a href="<%= url_for('/files/teodorescu_cv.pdf') %>" class="button" download>Download CV</a>
+</section>

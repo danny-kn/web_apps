@@ -1,0 +1,57 @@
+- title: "Voltage Noise-Based Adversarial Attacks on Machine Learning Inference in Multi-Tenant FPGA Accelerators"
+  authors: "Saikat Majumdar, and <u>Radu Teodorescu</u>"
+  periodicals: "In 2024 IEEE International Symposium on Hardware Oriented Security and Trust (HOST), 2024"
+  badge:
+    text: "HOST"
+    link: "http://www.hostsymposium.org"
+
+- title: "TEESec: Pre-Silicon Vulnerability Discovery for Trusted Execution Environments"
+  authors: "Moein Ghaniyoun, Kristin Barber, Yuan Xiao, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "In Proceedings of the 50th Annual International Symposium on Computer Architecture, 2023"
+  badge:
+    text: "ISCA"
+    link: "https://iscaconf.org/"
+
+- title: "A Systematic Look at Ciphertext Side Channels on AMD SEV-SNP"
+  authors: "Mengyuan Li, Luca Wilke, Jan Wichelmann, Thomas Eisenbarth, <u>Radu Teodorescu</u>, and Yinqian Zhang"
+  periodicals: "In 2022 IEEE Symposium on Security and Privacy (SP), 2022"
+  badge:
+    text: "SP"
+
+- title: "A Pre-Silicon Approach to Discovering Microarchitectural Vulnerabilities in Security Critical Applications"
+  authors: "Kristin Barber, Moein Ghaniyoun, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "IEEE Computer Architecture Letters, 2022"
+  badge:
+    text: "CAL"
+
+- title: "Using Undervolting as an on-Device Defense Against Adversarial Machine Learning Attacks"
+  authors: "Saikat Majumdar, Mohammad Hossein Samavatian, Kristin Barber, and <u>Radu Teodorescu</u>"
+  periodicals: "In 2021 IEEE International Symposium on Hardware Oriented Security and Trust (HOST), 2021"
+  badge:
+    text: "HOST"
+
+- title: "IntroSpectre: A pre-silicon framework for discovery and analysis of transient execution vulnerabilities"
+  authors: "Moein Ghaniyoun, Kristin Barber, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "In 2021 ACM/IEEE 48th Annual International Symposium on Computer Architecture (ISCA), 2021"
+  badge:
+    text: "ISCA"
+    link: "https://iscaconf.org/"
+
+- title: "SPEECHMINER: A Framework for Investigating and Measuring Speculative Execution Vulnerabilities"
+  authors: "Yuan Xiao, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "Network and Distributed System Security Symposium (NDSS), 2020"
+  badge:
+    text: "NDSS"
+    link: "https://iscaconf.org/"
+
+- title: "Isolating Speculative Data to Prevent Transient Execution Attacks"
+  authors: "Kristin Barber, Li Zhou, Anys Bacha, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "IEEE Computer Architecture Letters, 2019"
+  badge:
+    text: "CAL"
+
+- title: "SpecShield: Shielding Speculative Data from Microarchitectural Covert Channels"
+  authors: "Kristin Barber, Anys Bacha, Li Zhou, Yinqian Zhang, and <u>Radu Teodorescu</u>"
+  periodicals: "In 2019 28th International Conference on Parallel Architectures and Compilation Techniques (PACT), 2019"
+  badge:
+    text: "PACT"
