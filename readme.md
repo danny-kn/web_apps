@@ -7,7 +7,7 @@ This repository contains multiple projects developed for CSE 3901, a comprehensi
 ### 1. **Presentation Evaluation System** (`proj/`)
 A comprehensive Ruby on Rails web application for managing and evaluating student presentations in academic courses.
 
-**Technologies**: Ruby on Rails 7.x, PostgreSQL, HTML/ERB, CSS, JavaScript (Stimulus), Devise, Pundit  
+**Technologies**: Ruby on Rails 7.x, PostgreSQL, HTML/ERB, CSS, JavaScript (Stimulus), Devise, Pundit.
 **Features**:
 - Multi-role user authentication (Students, Instructors, TAs).
 - Course management and enrollment system.
@@ -28,7 +28,7 @@ rails server
 A modern, responsive faculty website built with Middleman static site generator.
 
 ![Faculty Website Main Page](site_redesign/img/img_01.png)
-*Main faculty page featuring contact information, biography, and publications*
+*Main faculty page featuring contact information, biography, and publications*.
 
 **Technologies**: Ruby, Middleman, SCSS, HTML5, ERB templating.
 **Features**:
@@ -46,15 +46,15 @@ middleman server
 ```
 
 ![About Page](site_redesign/img/img_02.png)
-*About page with detailed faculty information*
+*About page with detailed faculty information*.
 
 ![Faculty Directory](site_redesign/img/img_03.png)
-*Faculty and research directory page*
+*Faculty and research directory page*.
 
 ### 3. **The Game of Set** (`the_game_of_set/`)
 A Ruby command-line implementation of the classic Set card game with object-oriented design.
 
-**Technologies**: Ruby, Object-Oriented Programming  
+**Technologies**: Ruby, Object-Oriented Programming.
 **Features**:
 - Complete Set card game logic.
 - Card class with shape, color, fill, and count attributes.
@@ -73,7 +73,7 @@ ruby src/game.rb
 A modern web-based version of the Set card game with interactive JavaScript gameplay.
 
 ![Game Interface](the_game_of_set_revisited/img/img_01.png)
-*Main game interface showing 12 face-up cards, controls, and score display*
+*Main game interface showing 12 face-up cards, controls, and score display*.
 
 **Technologies**: Vanilla JavaScript, HTML5, CSS3, DOM manipulation.
 **Features**:
@@ -92,10 +92,10 @@ npm start
 ```
 
 ![Game in Progress](the_game_of_set_revisited/img/img_02.png)
-*Game interface during play with card selection and set identification*
+*Game interface during play with card selection and set identification*.
 
 ![Game Features](the_game_of_set_revisited/img/img_03.png)
-*Additional features including draw pile, timer, and statistics*
+*Additional features including draw pile, timer, and statistics*.
 
 ### 5. **Lecture Slides** (`lec_slides/`)
 Course lecture materials covering various software engineering topics.
