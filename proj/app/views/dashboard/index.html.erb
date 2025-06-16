@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h1>Dashboard</h1>
+  
+  <div class="row mt-4">
+    <div class="col-md-8">
+      <h2>Your Courses</h2>
+      <div class="list-group">
+        <% @courses.each do |course| %>
+          <%= link_to course_path(course), class: "list-group-item list-group-item-action" do %>
+            <h5 class="mb-1"><%= course.code %> - <%= course.name %></h5>
+            <p class="mb-1">
+              <%= pluralize(course.students.count, 'student') %> enrolled
+            </p>
+          <% end %>
+        <% end %>
+      </div>
+      
+      <% if current_user.instructor? %>
+        <%= render "instructor-dashboard"  %>
+      <% else %>
+        <%= render "student-dashboard" %>
+      <% end %>
+    </div>
+  </div>
+</div> 

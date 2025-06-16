@@ -1,0 +1,78 @@
+<div class="container mt-4">
+  <h1><%= @presentation.title %></h1>
+  
+  <div class="card mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Details</h5>
+      <p class="card-text">
+        Presenter: <%= @presentation.presenter.name %><br>
+        Date: <%= @presentation.presentation_date.strftime("%B %d, %Y") %><br>
+        Course: <%= @presentation.course.name %>
+      </p>
+      <p class="card-text">
+        <%= @presentation.description %>
+      </p>
+    </div>
+  </div>
+
+  <% if @evaluation %>
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Submit Evaluation</h5>
+        <%= form_with(model: [@presentation, @evaluation], local: true) do |f| %>
+          <div class="mb-3">
+            <%= f.label :score, class: "form-label" %>
+            <%= f.select :score, options_for_select(1..5), {}, class: "form-select" %>
+          </div>
+          
+          <div class="mb-3">
+            <%= f.label :comments, class: "form-label" %>
+            <%= f.text_area :comments, class: "form-control" %>
+          </div>
+
+          <%= f.submit "Submit Evaluation", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if policy(@presentation.evaluations).index? %>
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="card-title">Evaluations</h5>
+        <% @presentation.evaluations.each do |evaluation| %>
+          <div class="border-bottom mb-3 pb-3">
+            <p>
+              Score: <%= evaluation.score %>/5<br>
+              By: <%= evaluation.evaluator.name %><br>
+              Comments: <%= evaluation.comments %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if current_user.instructor? %>
+    <div class="mt-3">
+      <% if @presentation.grade.present? %>
+        <%= link_to "Edit Grade", edit_presentation_grade_path(@presentation), 
+            class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Grade Presentation", new_presentation_grade_path(@presentation), 
+            class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+    <% if @presentation.grade.present? %>
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Grade Information</h5>
+          <p><strong>Score:</strong> <%= @presentation.grade.score %></p>
+          <p><strong>Feedback:</strong> <%= @presentation.grade.feedback %></p>
+          <p><small>Graded by: <%= @presentation.grade.instructor.name %></small></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div> 

@@ -1,0 +1,28 @@
+<%= form_with(model: course, local: true) do |f| %>
+  <div class="mb-3">
+    <%= f.label :name, class: "form-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+    <% course.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :code, class: "form-label" %>
+    <%= f.text_field :code, class: "form-control" %>
+    <% course.errors.full_messages_for(:code).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :student_ids, "Students", class: "form-label" %>
+    <p>Use the cmd or shift keys to select multiple students. Unselected students are removed from the course.</p>
+    <%= f.collection_select :student_ids, User.where(role: :student), :id, :name, {prompt: true}, {class: "form-control", multiple: true} %>
+    <% course.errors.full_messages_for(:students).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %> 

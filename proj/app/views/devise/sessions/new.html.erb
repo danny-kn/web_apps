@@ -1,0 +1,43 @@
+<div class="auth-container">
+  <h2>Log in</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="auth-field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="auth-field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="auth-checkbox">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "auth-submit" %>
+    </div>
+  <% end %>
+
+  <div class="auth-divider">OR</div>
+
+  <a href="#" class="oauth-button">
+    <i class="bi bi-apple"></i>
+    Log in with Apple
+  </a>
+  <a href="#" class="oauth-button">
+    <i class="bi bi-google"></i>
+    Log in with Google
+  </a>
+  <a href="#" class="oauth-button">
+    <i class="bi bi-facebook"></i>
+    Log in with Facebook
+  </a>
+
+  <div class="auth-links">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

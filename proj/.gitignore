@@ -1,0 +1,11 @@
+# Ignore all tmp files and directories
+/tmp/*
+!/tmp/.keep
+
+# Specifically ignore common tmp subdirectories
+/tmp/cache
+/tmp/pids
+/tmp/sockets
+/tmp/restart.txt
+/tmp/development_secret.txt
+.yarn-integrity

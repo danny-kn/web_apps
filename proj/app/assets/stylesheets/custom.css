@@ -1,0 +1,337 @@
+:root {
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --background-color: #1a1a1a;
+  --surface-color: #242424;
+  --navbar-color: #2d2d2d;
+  --card-hover-color: #2a2a2a;
+  --error-color: #cf6679;
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+.navbar {
+  background-color: var(--navbar-color) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-primary) !important;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.dropdown-menu {
+  background-color: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item {
+  color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+}
+
+.card {
+  background-color: var(--surface-color);
+  border: none;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.card-title {
+  color: var(--text-primary);
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #9965f4;
+  border-color: #9965f4;
+  color: #000;
+}
+
+.list-group-item {
+  background-color: var(--surface-color);
+  transition: all 0.2s ease;
+  padding: 1rem 1.25rem;
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem !important;
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+}
+
+.list-group-item:hover {
+  background-color: var(--card-hover-color);
+  transform: translateX(4px);
+}
+
+.list-group-item h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.list-group-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.alert {
+  border: none;
+  box-shadow: var(--card-shadow);
+}
+
+.alert-success {
+  background-color: rgba(3, 218, 198, 0.1);
+  color: var(--secondary-color);
+}
+
+.alert-danger {
+  background-color: rgba(207, 102, 121, 0.1);
+  color: var(--error-color);
+}
+
+.course-card {
+  height: 100%;
+}
+
+.presentation-details {
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.evaluation-form {
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.form-control,
+.form-select {
+  background-color: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--surface-color);
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25);
+}
+
+.form-label {
+  color: var(--text-primary);
+}
+
+.table {
+  color: var(--text-primary);
+}
+
+.table thead th {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.table td,
+.table th {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.dashboard-card {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.student-count {
+  background-color: rgba(187, 134, 252, 0.1);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  border: none;
+}
+
+/* Auth form fields */
+.auth-field {
+  margin-bottom: 1.5rem;
+}
+
+.auth-field input[type="email"],
+.auth-field input[type="password"],
+.auth-field input[type="text"],
+.auth-field select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+.auth-field input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.25);
+}
+
+/* Remember me checkbox */
+.auth-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-checkbox input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Submit button */
+.auth-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-submit:hover {
+  background-color: #9965f4;
+}
+
+/* Divider */
+.auth-divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.auth-divider::before {
+  left: 0;
+}
+
+.auth-divider::after {
+  right: 0;
+}
+
+.oauth-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.oauth-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.auth-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.auth-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
